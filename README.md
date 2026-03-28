@@ -1,209 +1,222 @@
 # Exno.7-Develop a prompt-based application tailored to their personal needs, fostering creativity and practical problem-solving skills while leveraging the capabilities of large language models.
 
-# Date: 16-03-2026
+# Name: KAILASH KUMAR S
 # Register no: 212223220041
 # Aim: To develop a prompt-based application using ChatGPT - To demonstrate how to create a prompt-based application to organize daily tasks, showing the progression from simple to more advanced prompt designs and their corresponding outputs.
 
-##  🧰 AI Tool Used
-ChatGPT – For generating study plans, revision reminders, and personalized learning suggestions.
+# AI Tools Required: 
 
-## 🧑‍🏫 Use Case Scenario
-Prompt Context:
-“You are a final-year college student preparing for semester exams in five subjects. The assistant should help you prepare a detailed study plan, keep track of progress, and provide motivation tips.”
+Excellent — that’s a clear and practical project idea!
+Below is a **complete, well-structured explanation and demonstration** for your topic:
 
-## 📝 Explanation
-# Prompt:
-"Design a study assistant that can help plan exam preparation schedules, suggest subject-wise strategies, manage time, track progress, and motivate students. The assistant should communicate naturally and evolve with the student's pace."
+# **Experiment Title:**
 
-## 🧪 Procedure
-1. Define the core requirements of an AI study assistant.
+**Developing a Prompt-Based Application using ChatGPT for a Study Time Scheduler**
 
-2. Create structured prompts for various preparation phases using ChatGPT.
+## **Aim:**
 
-3. Simulate user interactions through prompts/responses.
+To demonstrate how to create a prompt-based application using ChatGPT to organize and schedule study tasks, showing the progression from **simple prompts** to **advanced prompt designs** and their corresponding outputs.
 
-4. Collect feedback and adjust suggestions dynamically.
+## **Concept Overview:**
 
-5. (Optional) Use preference data to adapt study tips over time.
+A **prompt-based application** uses carefully designed instructions (prompts) to guide ChatGPT in performing specific tasks — here, it acts as a **Study Time Scheduler**.
+By improving prompt design step by step, we can make the system more intelligent, structured, and user-friendly.
 
-## 📈 Expected Output
-A day-wise, subject-wise study plan with motivational reminders and tracking strategy.
+## **Stages of Development**
 
-## 🧾 Output (Example Response by LLM)
-1.Study Assistant Features
- Daily Planner
+### **Stage 1 — Simple Prompt**
 
-Break down syllabus into manageable chunks
+**Objective:** Create a basic list of study activities.
 
-Assign tasks per day with realistic timing
+**Prompt Example:**
 
-Prioritize difficult subjects or chapters
+> “Help me organize my study tasks for today. I need to study Math, Physics, and English.”
 
-2. 📊 Progress Tracker
+**Sample Output:**
 
-Mark completed chapters
+```
+Here’s your study plan:
+1. Study Math
+2. Study Physics
+3. Study English
+```
 
-Display pending topics
+**Learning Outcome:**
+ChatGPT can generate a simple, direct response without additional structure.
 
-Alert on backlogs or missed tasks
+### **Stage 2 — Structured Prompt**
 
-3.🌟 Motivational Tips Generator
+**Objective:** Provide more detail — include time slots and durations.
 
-Send daily motivational quotes
+**Prompt Example:**
 
-Encourage productive habits (Pomodoro, active recall)
+> “You are my study assistant. Create a time schedule for the following subjects:
 
-Suggest relaxation and self-care
+> * Math
+> * Physics
+> * English
+>   I have 6 hours to study today. Divide my time efficiently.”
 
-## 🔧 Algorithm Overview
-The assistant organizes a 14-day exam prep schedule, balancing all subjects with revision slots and rest breaks.
+**Sample Output:**
 
-### 📨 Input
-User Objective: “Prepare for semester exams in 14 days”
-Subjects: DBMS, OS, CN, AI, Software Engineering
-Preferences:
+```
+ Study Time Schedule
+-------------------------
+9:00–11:00 AM — Math (2 hours)
+11:15 AM–1:15 PM — Physics (2 hours)
+2:00–4:00 PM — English (2 hours)
+```
 
-Study 6 hours daily
+**Learning Outcome:**
+Structured prompts provide more organized and practical schedules.
 
-Include revision & mock tests
+### **Stage 3 — Parameterized Prompt**
 
-Motivational prompts
+**Objective:** Introduce variables to make the prompt reusable and adaptable.
 
-### 📤 Output
-Personalized 2-week subject-wise timetable
+**Prompt Template:**
 
-Daily to-do lists
+> “You are an intelligent study planner. Based on the following details, create a daily study schedule.
+> Subjects: {{subjects}}
+> Available hours: {{hours}}
+> Preferences: {{preferences}} (e.g., more time for difficult subjects, include short breaks)
+> Output: A clear table with time, subject, and notes.”
 
-Break and wellness prompts
+**Example Input:**
 
-End-of-day reviews
+```
+subjects = ["Math", "Physics", "Computer Science", "English"]
+hours = "8 AM to 6 PM"
+preferences = "More focus on Math and short breaks after each subject"
+```
 
-## 🧠 Step-by-Step Algorithm
-1. Start
+**Sample Output:**
 
-2. Initialize Assistant – Input subjects, days available
+| Time           | Subject          | Notes                        |
+| -------------- | ---------------- | ---------------------------- |
+| 8–10 AM        | Math             | High priority subject        |
+| 10–10:15 AM    | Break            | Refresh your mind            |
+| 10:15–12:15 PM | Physics          | Revise important formulas    |
+| 1–3 PM         | Computer Science | Practice coding problems     |
+| 3–3:15 PM      | Break            | Take a short walk            |
+| 3:15–5 PM      | English          | Reading and writing practice |
 
-3. Subject Priority Plan
+**Learning Outcome:**
+Parameterized prompts create flexibility and make prompts suitable for app integration.
 
-Input: User marks tough/easy subjects
+### **Stage 4 — Multi-Prompt Workflow**
 
-Output: Allocate more time to difficult ones
+**Objective:** Simulate a complete Study Planner app using multiple steps.
 
-4. Daily Schedule Generation
+**Prompt Sequence:**
 
-Output: Study blocks + short breaks + revision
+1. **Prompt 1 – Input Collection:**
 
-5. Wellness & Motivation
+   > “List the subjects you plan to study today.”
 
-Output: Hydration breaks, quotes, reward reminders
+2. **Prompt 2 – Schedule Creation:**
 
-6. Track Progress
+   > “Now, create a detailed schedule for these subjects, considering equal time and short breaks.”
 
-User checks off completed topics
+3. **Prompt 3 – Motivation:**
 
-7. Revise & Test Phase
+   > “Give me a motivational message to help me stay focused on my study plan.”
 
-Allocate last 3 days for full revision & mock tests
+**Combined Output:**
 
-🗓8. Display Summary – Final 14-day plan
+```
+ Study Plan for Today
+-------------------------
+8–10 AM: Math  
+10:15–12:15 PM: Physics  
+1–3 PM: Computer Science  
+3:15–5 PM: English  
 
-9. Feedback Loop – Adapt based on user progress
+ Motivation:
+“You don’t need to study harder — just smarter and consistently. Stay focused!”
+```
 
-## 🧬 Step-by-Step Prompt Evolution
-## 🟢 Step 1: Study Schedule Initialization
-### Prompt:
-“I have 14 days to prepare for my semester exams in DBMS, OS, CN, AI, and SE. Make me a balanced study plan.”
+**Learning Outcome:**
+Demonstrates **multi-step prompting** that mimics real application flow.
 
-### Output:
+### **Stage 5 — Advanced System Prompt (App-Like Design)**
 
-## 📚 Study Plan Outline (Sample):
+**Objective:** Use a **system prompt** and **structured output** (like JSON) for integration with applications.
 
-Day 1–10: Core Study Phase (3 subjects/day × 2 hours)
+**System Prompt Example:**
 
-Day 11–13: Full Revision
+> **System Role:** You are a smart study scheduler that organizes students’ study time efficiently. Always output the schedule in JSON format.
 
-Day 14: Mock Test + Rest
+**User Prompt:**
 
-### 📌 Day 1 Example:
+> “Subjects: Math, Physics, Computer Science, English
+> Available hours: 8 AM to 8 PM
+> Preference: Focus more on difficult subjects and include 15-minute breaks.”
 
-9–11 AM: DBMS – ER Diagrams
+**Sample JSON Output:**
 
-12–2 PM: CN – Network Layers
+```json
+{
+  "study_schedule": [
+    {"time": "8–10 AM", "subject": "Math", "priority": "High"},
+    {"time": "10–10:15 AM", "subject": "Break", "priority": "Rest"},
+    {"time": "10:15–12:15 PM", "subject": "Physics", "priority": "High"},
+    {"time": "1–3 PM", "subject": "Computer Science", "priority": "Medium"},
+    {"time": "3–3:15 PM", "subject": "Break", "priority": "Rest"},
+    {"time": "3:15–5 PM", "subject": "English", "priority": "Low"}
+  ],
+  "summary": "Morning hours are dedicated to challenging subjects. Maintain focus and take proper breaks."
+}
+```
 
-4–6 PM: AI – Search Algorithms
+**Learning Outcome:**
+This demonstrates **advanced prompt engineering** suitable for backend integration in chatbots or web applications.
 
-## 🔵 Step 2: Subject Prioritization
-### Prompt:
-“OS and AI are difficult for me. Focus more time on them.”
+## **Conclusion**
 
-### Output:
+Through this experiment, we successfully demonstrated how prompt engineering can be used to develop a **ChatGPT-based Study Time Scheduler**.
+By progressively refining prompts:
 
-⏱️ Adjusted Allocation:
+* Simple prompts → produce direct responses.
+* Structured and parameterized prompts → generate organized outputs.
+* Advanced system prompts → enable automation and app integration.
 
-OS: 3 hours every alternate day
+Hence, prompt-based applications can act as **intelligent virtual study assistants**, improving productivity and time management for students.
 
-AI: 2.5 hours every 3 days
+## **Optional Extension (Implementation Idea)**
 
-Lighter time for DBMS and SE
+You can extend this as a mini web or Python app:
 
-## 🟣 Step 3: Wellness + Motivation
-### Prompt:
-“Remind me to take care of my health and stay motivated during study.”
+* **Frontend (HTML/JS):** Collects subjects, available time, and preferences.
+* **Backend (Python/OpenAI API):** Sends prompts to ChatGPT.
+* **Output:** Displays a generated study schedule table.
 
-### Output:
+# Explanation: 
+Prompt:
+"Design a personal productivity assistant that can help manage daily tasks, schedule reminders, suggest wellness tips, and answer general queries. The assistant should interact using natural language and be adaptable to the user’s changing preferences over time."
+Procedure:
+1. Define the core requirements of a personal productivity assistant.
+2. Identify and construct appropriate prompts for each task using an LLM (e.g., ChatGPT).
+3. Simulate natural user interaction through a simple interface or command-line system.
+4. Collect feedback or inputs from users and adapt responses accordingly.
+5. (Optional) Integrate basic memory to simulate preference adaptation.
+EXPECTED OUTPUT: - (attached the drive link)
+Output (Example Response by LLM):
+Personal Productivity Assistant Features:
+1. Daily Task Manager:
+o Accept tasks via natural language (e.g., "Remind me to call mom at 6 PM").
+o Organize tasks by priority and deadline.
+o Provide daily summaries and pending items.
+2. Smart Scheduler:
+o Schedule events and set reminders using contextual understanding.
+o Notify user of overlapping appointments or free time slots.
+3. Wellness Tips Generator:
+o Suggest daily wellness advice (hydration, exercise, screen-time breaks).
+o Adapt suggestions based on past user preferences and responses.
 
-#### 🧘 Wellness Tips:
 
-10:30 AM – 10-minute walk/stretch
 
-1:00 PM – Light lunch and hydration
-
-5:00 PM – Music or rest break
-
-#### 📣 Motivation Tips:
-
-Daily Quote: “Success is the sum of small efforts, repeated.”
-
-Evening Tip: Reward yourself with an episode after task completion
-
-## 🟠 Step 4: Track Progress + Revise
-### Prompt:
-“Help me track completed topics and revise at the end.”
-
-### Output:
-
-### 📊 Progress Sheet:
-
-DBMS – ✅ ERD, ✅ Normalization, ⬜ SQL
-
-OS – ✅ Processes, ⬜ Scheduling
-
-AI – ⬜ Search, ⬜ Knowledge Representation
-
-## 🔁 Revision Plan:
-
-Day 11: DBMS + SE
-
-Day 12: CN + AI
-
-Day 13: OS + Mock Test
-
-Day 14: Quick Recap + Rest
-
-## 🧾 Summary Table
-
-| 🔢 Step | 🔎 Description        | 💬 Prompt Used                             | 🧩 Key Features               |
-| ------- | --------------------- | ------------------------------------------ | ----------------------------- |
-| 1       | Study Plan            | “I have 14 days to prepare…”               | Subject balance, timeline     |
-| 2       | Prioritization        | “OS and AI are difficult…”                 | Adaptive scheduling           |
-| 3       | Wellness & Motivation | “Remind me to stay healthy and motivated…” | Breaks, quotes, self-care     |
-| 4       | Revision & Tracking   | “Help me track and revise…”                | Checklist, feedback, revision |
-
-
-## 🏁 Conclusion
-This study assistant used prompt-based planning to help a student balance their study schedule effectively, offering motivation, tracking, and wellness integration. Prompt evolution enhanced personalization and effectiveness.
-
-## Result: 
+# Result: 
 The lab exercise resulted in the creation of a prototype concept for a personal assistant powered by large language models. Students were able to:
  Understand how to tailor LLM prompts to real-life applications.
  Foster creativity by designing features suited to their personal or academic lives.
